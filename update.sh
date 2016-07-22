@@ -15,3 +15,4 @@ echo === CHECK FILES BELOW ===
 find . -type f | xargs grep -l $ME
 echo === CHECK FILES ABOVE ===
 git diff
+git status
