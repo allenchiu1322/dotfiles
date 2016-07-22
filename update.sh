@@ -12,3 +12,4 @@ sed -i 's/$ME/$REPLACE/g' ./.tmux.conf
 cp -v /home/$ME/bin/autoscreen.sh ./bin/
 sed -i 's/$ME/$REPLACE/g' ./bin/autoscreen.sh
 find . -type f | xargs grep -l $ME
+git diff
