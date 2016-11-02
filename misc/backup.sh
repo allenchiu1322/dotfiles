@@ -1,6 +1,6 @@
 #!/bin/bash
 # set variables
-BACKUP_DEST="/media/sf_maria/backup/sanzenin"
+BACKUP_DEST="/media/sf_maria/backup/shirai"
 MAIL_ADDRESS="allen@server.example.com"
 # get system variables
 WEEKDAY=`date +"%w"`
