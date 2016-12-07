@@ -17,13 +17,12 @@ if [ "$TERM" != "screen" ]; then
       fi
     elif [ "$orz" == "2" ];then
       if [ -z "$TMUX" ]; then
-        SCREENLIST=`tmux ls`
-        if [ -z "$SCREENLIST" ]; then
-          tmux new-session -d -n 'd' -s homura 'tail -f /var/log/dmesg'
+        tmux attach-session -t homura
+        if [ $? -ne 0 ]; then
+          tmux new-session -d -s homura
+          tmux new-window -n 'd' -t homura 'tail -f /var/log/dmesg'
           tmux new-window -n 'sys' -t homura 'tail -f /var/log/syslog'
           tmux new-window -t homura 'bash'
-          tmux attach-session -t homura
-        else
           tmux attach-session -t homura
         fi
       else
