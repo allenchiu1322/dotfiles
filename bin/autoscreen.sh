@@ -32,4 +32,6 @@ if [ "$TERM" != "screen" ]; then
     else
         echo ""
     fi
+else
+    /bin/bash /home/$USER/bin/hourlyweather.sh
 fi
