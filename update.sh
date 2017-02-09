@@ -11,6 +11,7 @@ cp -v /home/$ME/.tmux.conf ./
 sed -i "s/$ME/$REPLACE/g" ./.tmux.conf
 cp -v /home/$ME/bin/autoscreen.sh ./bin/
 sed -i "s/$ME/$REPLACE/g" ./bin/autoscreen.sh
+cp -v /home/$ME/bin/arrange_files.sh ./bin/
 echo === CHECK FILES BELOW ===
 find . -type f | xargs grep -l $ME
 echo === CHECK FILES ABOVE ===
